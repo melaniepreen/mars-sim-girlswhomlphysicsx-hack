@@ -1,0 +1,17 @@
+# Keep organizer / scratch out of the public participant repo
+organizer-prep-plan-5080.md
+_pdf_extract.txt
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pt
+*.pth
+*.mdlus
+*.trt
+*.onnx
+*.pkl
+.venv/
+venv/

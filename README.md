@@ -1,22 +1,35 @@
 # Mars Sim Pack · GirlsWhoML × PhysicsX Hack
 
-Participant dataset & simulation starter kit for the **GirlsWhoML × PhysicsX Mars Hackathon** (London · 15 September · supported by Cursor).
+Participant dataset and simulation starter kit for the **GirlsWhoML × PhysicsX Mars Hackathon** (London · 15 September · supported by Cursor).
 
 > **Mission brief PDF:** [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf) · tracks, tools, schedule, rules, and judging.
+
+---
+
+## Start here tonight
+
+1. Read the **TL;DR** and pick **one track**.
+2. Choose **Open Sandbox** (PDF tools) or **Guided Trajectory** (download one zip below).
+3. Open `DATA_NOTES.txt` in that zip. Load the CSV (or images). Make one ML decision move the design.
+4. Get a core loop working before polish. Push your crew repo before the **20:35** hard cutoff (mission brief §08).
 
 ---
 
 ## TL;DR · What Mars is actually like
 
 - **Air:** Atmosphere exists, but ~1% of Earth's pressure. Almost all CO2, basically no oxygen. Unbreathable even if it weren't so thin.
-- **Temperature:** Averages about -60 °C. Can hit +20 °C at noon near the equator; drops below -100 °C at night. Huge swings because thin air can't hold heat.
+- **Temperature:** Averages about -60 C. Can hit +20 C at noon near the equator; drops below -100 C at night. Huge swings because thin air can't hold heat.
 - **Radiation:** No global magnetic field and barely any atmosphere, so little shielding from cosmic and solar radiation. Habitats need thick walls or underground shelter.
 - **Gravity:** ~38% of Earth's.
 - **Terrain:** Rocky, dusty, craters, cliffs, canyons. No roads; rovers navigate real hazards.
 - **Dust storms:** Can wrap the planet for weeks and block sunlight, which is critical for anything solar-powered.
 - **Day length:** A "sol" is ~24 h 40 m, close to Earth, but the night temperature crash is brutal.
 
-**Design preconditions (all tracks):** size for a **100-person** settlement and a **minimum 2 Earth-year (~730 sol)** window, the realistic gap between efficient resupply opportunities, including at least one dust-storm season.
+**Design preconditions (all tracks):** treat this as a real first city, not a 3-person demo.
+
+1. **100 people** live here. Size habitats, fleets, and life support for a settlement.
+2. **~2 Earth years (730 sols)** until the next cheap resupply. Your system has to last that gap.
+3. **One dust-storm season** sits inside that window (sols **180-260** in these packs). Sunlight dies. Dust gets bad. Design for it.
 
 ---
 
@@ -36,15 +49,17 @@ Best if you already know what you want to simulate and want full control over mo
 
 *Recommended datasets per track · less wrangling, more building.*
 
-Use the curated Mars datasets below so you can spend the evening on the actual habitat / rover / life-support logic. **Trained checkpoints and cleaned sample data will land in a follow-up commit**; this initial release is the dataset map and guidance only.
+Download **one zip** for your track. Each zip is already sized to the 100-person / 730-sol / dust-storm precondition. Open `DATA_NOTES.txt` inside the zip first.
 
-| Track | Recommended dataset | What you get | Link |
+| Track | Download | What it does | Source |
 | --- | --- | --- | --- |
-| **A · Architecture** | **EMARS** | Hourly temp / wind / pressure / dust (Mars Years 24-33) for thermal & weather-aware habitat design | [EMARS paper & data](https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.77) |
-| **B · Vehicles & Mobility** | **AI4MARS** | ~35k rover images, ~326k terrain labels (soil / bedrock / sand / rock / background) for route scoring | [NASA AI4MARS](https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars) |
-| **C · Life Support** | **ESA HREDA (Mars500)** | Real ECLSS + physiological telemetry for closed-loop O2 / water / food / waste forecasting | [ESA HREDA archive](http://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/8b3a6c3f-e7a0-4fb1-8693-8edd6515d06d.html) |
+| **A · Architecture** | [track-a-architecture-emars.zip](guided-packs/track-a-architecture-emars.zip) | Hourly weather at one settlement site for 730 sols: temp, wind, pressure, dust, plus heating load for 100 people. Use it to design habitats, insulation, or a storm-bunker restaurant. | [EMARS](https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.77) |
+| **B · Vehicles & Mobility** | [track-b-vehicles-ai4mars.zip](guided-packs/track-b-vehicles-ai4mars.zip) | Rover photos with terrain labels (soil / bedrock / sand / rock) plus a 2-year logistics timetable (3,130 trips). Use it to score routes or a self-driving Mars train. | [AI4MARS](https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars) |
+| **C · Life Support** | [track-c-life-support-hre.zip](guided-packs/track-c-life-support-hre.zip) | Daily O2 / water / food / waste / greenhouse ventilation for 100 people over 730 days, including a solar-killing dust storm. Use it to forecast shortages or run indoor greenhouse air. | [ESA HREDA / Mars500](http://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/8b3a6c3f-e7a0-4fb1-8693-8edd6515d06d.html) |
 
-**Coming next (follow-up commit):** pretrained / trained artefacts you can load immediately, e.g. weather downscaler checkpoint (Track A), terrain segmenter (Track B), life-support forecaster (Track C), plus small sample slices so you don't need to download full archives on the night.
+Browse the unzipped folders on GitHub if you just want to peek: [`guided-packs/`](guided-packs/).
+
+**What is real vs ready-made:** Track B includes 48 real AI4MARS image+label pairs. Tracks A and C (and Track B's trip timetable) are hack-ready tables built from those sources, because the full archives are huge or login-gated. Each pack says this clearly in `DATA_NOTES.txt`.
 
 ---
 
@@ -68,16 +83,7 @@ Prompts, not ceilings. Remix them.
 
 Full problem framing, example builds, schedule, and judging rubric: the PDF.
 
----
-
-## How to use this repo tonight
-
-1. Read the **TL;DR** and pick **one track**.
-2. Choose **Open Sandbox** (PDF tools) or **Guided Trajectory** (table above).
-3. Scope one decision ML will drive; get a core loop working before polish.
-4. Push your crew repo before the **20:35** hard cutoff (see mission brief §08).
-
-Questions on the floor: mentors cover PhysicsX, 3D modelling, and ML support.
+Mentors on the floor cover PhysicsX, 3D modelling, and ML support.
 
 ---
 

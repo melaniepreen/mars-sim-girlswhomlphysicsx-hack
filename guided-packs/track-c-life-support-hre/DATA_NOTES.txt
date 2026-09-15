@@ -1,6 +1,13 @@
 TRACK C  -  Life Support  -  ESA HREDA / Mars500 closed-loop pack
 =============================================================
 
+In plain English
+  What: A daily life-support log for 100 people across 730 days.
+  Type: Numbers table (CSV) -- O2, CO2, water, food, waste, solar availability,
+        greenhouse ventilation, cabin CO2 proxy. Storm days cut solar and stress air.
+  Useful for: Life support -- forecast shortages, balance a closed loop, or drive
+        a greenhouse HVAC / "keep air breathable when the sun dies" demo.
+
 What this is for
   Closed-loop O2 / water / food / waste forecasting and greenhouse air
   ventilation for a 100-person settlement across a minimum 730-day window,

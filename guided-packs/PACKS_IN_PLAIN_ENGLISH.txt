@@ -1,0 +1,37 @@
+GUIDED TRAJECTORY ZIPS · in plain English
+========================================
+Full detail lives in each zip's DATA_NOTES.txt. One-line map:
+
+  Zip A  Weather time series     -> design shelter against cold + dust
+  Zip B  Photos + trip logs      -> navigate / schedule transport safely
+  Zip C  Resource daily totals   -> keep air, water, food, power alive
+
+-------------------------------------------------------------------------------
+Track A · track-a-architecture-emars.zip
+-------------------------------------------------------------------------------
+What: Spreadsheet-style weather for one Mars settlement site.
+Type: Numbers over time (CSV / parquet) -- temp, wind, pressure, dust,
+      heating load for 100 people. Hourly for ~2 years (730 sols).
+      Storm days flagged (sols 180-260).
+Useful for: Habitats / architecture -- size walls, insulation, or a
+      "seal the bunker restaurant" rule when it freezes or storms.
+
+-------------------------------------------------------------------------------
+Track B · track-b-vehicles-ai4mars.zip
+-------------------------------------------------------------------------------
+What: (1) Rover photos with labels for soil / bedrock / sand / rock.
+      (2) Trip timetable CSV -- thousands of runs over 730 sols for 100 people.
+Type: Images + masks (vision) and a logistics table (tabular).
+Useful for: Vehicles / mobility -- score safe paths and energy for a rover
+      or Mars train, including dust storms and battery wear.
+
+-------------------------------------------------------------------------------
+Track C · track-c-life-support-hre.zip
+-------------------------------------------------------------------------------
+What: Daily life-support log for 100 people across 730 days.
+Type: Numbers table (CSV) -- O2, CO2, water, food, waste, solar,
+      greenhouse ventilation, cabin CO2 proxy.
+Useful for: Life support -- forecast shortages or run greenhouse air when
+      a dust storm kills the sunlight.
+
+Also see: repo root CREDITS.txt, KNOWN_ISSUES.txt, LICENSE.

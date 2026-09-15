@@ -1,14 +1,6 @@
 TRACK B  -  Vehicles & Mobility  -  AI4MARS terrain pack
 ====================================================
 
-In plain English
-  What: Two things -- (1) rover photos with label images for soil / bedrock /
-        sand / rock, and (2) a trip timetable CSV of cargo/EVA-style runs over
-        730 sols for 100 people (distance, payload, energy, risk, battery, storm).
-  Type: Images + masks (vision) and a logistics table (tabular).
-  Useful for: Vehicles / mobility -- "is this path safe?" then score a rover
-        or Mars-train route for energy and risk, including dust storms.
-
 What this is for
   Terrain-aware route scoring / self-driving surface transport for a
   100-person settlement across 2 years of duty cycles (battery wear included),

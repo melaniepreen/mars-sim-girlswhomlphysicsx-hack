@@ -1,14 +1,6 @@
 TRACK A  -  Architecture  -  EMARS weather pack
 ===========================================
 
-In plain English
-  What: Spreadsheet-style weather for one Mars settlement site.
-  Type: Numbers over time (CSV / parquet) -- temperature, wind, pressure,
-        dust, plus heating load for 100 people. One row per hour for ~2 years
-        (730 sols). Storm days flagged (sols 180-260).
-  Useful for: Habitat / architecture -- when it freezes or storms, so you can
-        size walls, insulation, or a "seal the bunker restaurant" rule.
-
 What this is for
   Thermal & weather-aware habitat design for a 100-person settlement across
   a 2 Earth-year (~730 sol) window, including one dust-storm season.

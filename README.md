@@ -1,10 +1,10 @@
-# Mars Sim Pack ù GirlsWhoML ù PhysicsX Hack
+# Mars Sim Pack ∑ GirlsWhoML ◊ PhysicsX Hack
 
-Participant dataset and simulation starter kit for the **GirlsWhoML ù PhysicsX Mars Hackathon** (London ù 15 September ù supported by Cursor).
+Participant dataset and simulation starter kit for the **GirlsWhoML ◊ PhysicsX Mars Hackathon** (London ∑ 15 September ∑ supported by Cursor).
 
-> **Mission brief PDF:** [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf) ù tracks, tools, schedule, rules, and judging.
+> **Mission brief PDF:** [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf) ∑ tracks, tools, schedule, rules, and judging.
 >
-> **License / credits / gotchas:** [`LICENSE`](./LICENSE) ù [`CREDITS.txt`](./CREDITS.txt) ù [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt)
+> **License / credits / gotchas:** [`LICENSE`](./LICENSE) ∑ [`CREDITS.txt`](./CREDITS.txt) ∑ [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt)
 
 ---
 
@@ -13,11 +13,11 @@ Participant dataset and simulation starter kit for the **GirlsWhoML ù PhysicsX M
 1. Read the **TL;DR** and pick **one track**.
 2. Choose **Open Sandbox** (PDF tools) or **Guided Trajectory** (download one zip below).
 3. Open `DATA_NOTES.txt` in that zip. Skim [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt) so you do not overclaim the data.
-4. Load the CSV (or images). Make one ML decision move a CAD model or a simple UI. Push before **20:35** (mission brief ù08).
+4. Load the CSV (or images). Make one ML decision move a CAD model or a simple UI. Push before **20:35** (mission brief ß08).
 
 ---
 
-## TL;DR ù What Mars is actually like
+## TL;DR ∑ What Mars is actually like
 
 - **Air:** Atmosphere exists, but ~1% of Earth's pressure. Almost all CO2, basically no oxygen. Unbreathable even if it weren't so thin.
 - **Temperature:** Averages about -60 C. Can hit +20 C at noon near the equator; drops below -100 C at night. Huge swings because thin air can't hold heat.
@@ -43,23 +43,23 @@ Two ways to work. Same brief, different levels of freedom.
 
 *Freedom to choose your own weights, assumptions, and conditions.*
 
-Use the mission brief PDF as your toolkit map. Pick the libraries and data sources that fit your idea: SpiceyPy, GDAL/rasterio, Gazebo/ROS 2, PyBullet/MuJoCo, OpenFOAM, Blender, scikit-learn, PyTorch, Optuna, and the rest listed under **ù03 Tools & Resources** in [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf).
+Use the mission brief PDF as your toolkit map. Pick the libraries and data sources that fit your idea: SpiceyPy, GDAL/rasterio, Gazebo/ROS 2, PyBullet/MuJoCo, OpenFOAM, Blender, scikit-learn, PyTorch, Optuna, and the rest listed under **ß03 Tools & Resources** in [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf).
 
 Best if you already know what you want to simulate and want full control over model weights, loss terms, and environmental assumptions.
 
 ### 2. Guided Trajectory Pack
 
-*Recommended datasets per track ù less wrangling, more building.*
+*Recommended datasets per track ∑ less wrangling, more building.*
 
 Download **one zip** for your track. Each zip is already sized to the 100-person / 730-sol / dust-storm precondition. Open `DATA_NOTES.txt` inside the zip first.
 
 | Track | Download | What it does | Source |
 | --- | --- | --- | --- |
-| **A ù Architecture** | [track-a-architecture-emars.zip](guided-packs/track-a-architecture-emars.zip) | Hourly weather at one settlement site for 730 sols: temp, wind, pressure, dust, plus heating load for 100 people. Use it to design habitats, insulation, or a storm-bunker restaurant. | [EMARS](https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.77) |
-| **B ù Vehicles & Mobility** | [track-b-vehicles-ai4mars.zip](guided-packs/track-b-vehicles-ai4mars.zip) | Rover photos with terrain labels (soil / bedrock / sand / rock) plus a 2-year logistics timetable (3,130 trips). Use it to score routes or a self-driving Mars train. | [AI4MARS](https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars) |
-| **C ù Life Support** | [track-c-life-support-hre.zip](guided-packs/track-c-life-support-hre.zip) | Daily O2 / water / food / waste / greenhouse ventilation for 100 people over 730 days, including a solar-killing dust storm. Use it to forecast shortages or run indoor greenhouse air. | [ESA HREDA / Mars500](http://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/8b3a6c3f-e7a0-4fb1-8693-8edd6515d06d.html) |
+| **A ∑ Architecture** | [track-a-architecture-emars.zip](guided-packs/track-a-architecture-emars.zip) | Hourly weather at one settlement site for 730 sols: temp, wind, pressure, dust, plus heating load for 100 people. Use it to design habitats, insulation, or a storm-bunker restaurant. | [EMARS](https://rmets.onlinelibrary.wiley.com/doi/10.1002/gdj3.77) |
+| **B ∑ Vehicles & Mobility** | [track-b-vehicles-ai4mars.zip](guided-packs/track-b-vehicles-ai4mars.zip) | Rover photos with terrain labels (soil / bedrock / sand / rock) plus a 2-year logistics timetable (3,130 trips). Use it to score routes or a self-driving Mars train. | [AI4MARS](https://data.nasa.gov/dataset/ai4mars-a-dataset-for-terrain-aware-autonomous-driving-on-mars) |
+| **C ∑ Life Support** | [track-c-life-support-hre.zip](guided-packs/track-c-life-support-hre.zip) | Daily O2 / water / food / waste / greenhouse ventilation for 100 people over 730 days, including a solar-killing dust storm. Use it to forecast shortages or run indoor greenhouse air. | [ESA HREDA / Mars500](http://esdcdoi.esac.esa.int/doi/html/data/hre/hreda/8b3a6c3f-e7a0-4fb1-8693-8edd6515d06d.html) |
 
-Browse the unzipped folders on GitHub if you just want to peek: [`guided-packs/`](guided-packs/). Plain-English ìwhat / type / useful forî for each zip: [`guided-packs/PACKS_IN_PLAIN_ENGLISH.txt`](guided-packs/PACKS_IN_PLAIN_ENGLISH.txt) (also at the top of each zipís `DATA_NOTES.txt`).
+Browse the unzipped folders on GitHub if you just want to peek: [`guided-packs/`](guided-packs/).
 
 **What is real vs ready-made:** Track B includes 48 real AI4MARS image+label pairs. Tracks A and C (and Track B's trip timetable) are hack-ready tables built from those sources, because the full archives are huge or login-gated. Full citations and license notes: [`CREDITS.txt`](./CREDITS.txt).
 
@@ -79,13 +79,13 @@ Fast path tonight: pandas or a notebook computes one number (seal / risk / vent)
 
 ---
 
-## Example ideas ù go crazy
+## Example ideas ∑ go crazy
 
 Prompts, not ceilings. Remix them.
 
-- **Track A ù Architecture:** Mars storm-bunker restaurants that seal and re-route when dust walls hit.
-- **Track B ù Vehicles & Mobility:** Self-driving train transportation across Mars, scoring every stretch of trackbed for safety and energy.
-- **Track C ù Life Support:** Indoor air ventilation systems for greenhouses that keep both crew and crops alive through solar blackouts.
+- **Track A ∑ Architecture:** Mars storm-bunker restaurants that seal and re-route when dust walls hit.
+- **Track B ∑ Vehicles & Mobility:** Self-driving train transportation across Mars, scoring every stretch of trackbed for safety and energy.
+- **Track C ∑ Life Support:** Indoor air ventilation systems for greenhouses that keep both crew and crops alive through solar blackouts.
 
 ---
 
@@ -115,4 +115,4 @@ Mentors on the floor cover PhysicsX, 3D modelling, and ML support.
 
 ---
 
-*Not affiliated as an official PhysicsX product. Community starter pack for GirlsWhoML ù PhysicsX participants. Original pack content: MIT. Upstream datasets: see CREDITS.txt.*
+*Not affiliated as an official PhysicsX product. Community starter pack for GirlsWhoML ◊ PhysicsX participants. Original pack content: MIT. Upstream datasets: see CREDITS.txt.*

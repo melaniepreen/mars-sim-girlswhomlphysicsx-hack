@@ -31,3 +31,7 @@ Files
 How to use tonight
   Forecast resource margins or tune a greenhouse HVAC brain off
   activity_level, dust_storm_flag, and ventilation columns.
+
+Attribution
+  See repo root CREDITS.txt, LICENSE, and KNOWN_ISSUES.txt for sources,
+  license gaps, and adversarial checks before you demo.

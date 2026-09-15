@@ -37,3 +37,7 @@ How to use tonight
   Load the hourly CSV/parquet. Drive wall thickness, insulation, or a
   storm-bunker restaurant seal schedule off dust_storm_flag + thermal load.
   Cite EMARS as the climate prior; treat this file as the hack-ready slice.
+
+Attribution
+  See repo root CREDITS.txt, LICENSE, and KNOWN_ISSUES.txt for sources,
+  license gaps, and adversarial checks before you demo.

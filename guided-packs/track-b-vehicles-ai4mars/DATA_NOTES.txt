@@ -31,3 +31,7 @@ Files
 How to use tonight
   Segment terrain from images/labels, then score routes in the duty-cycle CSV
   (or invent a Mars train timetable) under dust_storm_flag + battery_soh.
+
+Attribution
+  See repo root CREDITS.txt, LICENSE, and KNOWN_ISSUES.txt for sources,
+  license gaps, and adversarial checks before you demo.

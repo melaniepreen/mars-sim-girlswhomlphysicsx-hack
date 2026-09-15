@@ -3,6 +3,8 @@
 Participant dataset and simulation starter kit for the **GirlsWhoML × PhysicsX Mars Hackathon** (London · 15 September · supported by Cursor).
 
 > **Mission brief PDF:** [`Mars_Hackathon_Mission_Brief.pdf`](./Mars_Hackathon_Mission_Brief.pdf) · tracks, tools, schedule, rules, and judging.
+>
+> **License / credits / gotchas:** [`LICENSE`](./LICENSE) · [`CREDITS.txt`](./CREDITS.txt) · [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt)
 
 ---
 
@@ -10,8 +12,8 @@ Participant dataset and simulation starter kit for the **GirlsWhoML × PhysicsX M
 
 1. Read the **TL;DR** and pick **one track**.
 2. Choose **Open Sandbox** (PDF tools) or **Guided Trajectory** (download one zip below).
-3. Open `DATA_NOTES.txt` in that zip. Load the CSV (or images). Make one ML decision move the design.
-4. Get a core loop working before polish. Push your crew repo before the **20:35** hard cutoff (mission brief §08).
+3. Open `DATA_NOTES.txt` in that zip. Skim [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt) so you do not overclaim the data.
+4. Load the CSV (or images). Make one ML decision move a CAD model or a simple UI. Push before **20:35** (mission brief §08).
 
 ---
 
@@ -59,7 +61,21 @@ Download **one zip** for your track. Each zip is already sized to the 100-person
 
 Browse the unzipped folders on GitHub if you just want to peek: [`guided-packs/`](guided-packs/).
 
-**What is real vs ready-made:** Track B includes 48 real AI4MARS image+label pairs. Tracks A and C (and Track B's trip timetable) are hack-ready tables built from those sources, because the full archives are huge or login-gated. Each pack says this clearly in `DATA_NOTES.txt`.
+**What is real vs ready-made:** Track B includes 48 real AI4MARS image+label pairs. Tracks A and C (and Track B's trip timetable) are hack-ready tables built from those sources, because the full archives are huge or login-gated. Full citations and license notes: [`CREDITS.txt`](./CREDITS.txt).
+
+---
+
+## Pairing the packs with CAD or a front end
+
+The CSVs and images are inputs. The demo judges remember is usually a **3D model that reacts** or a **small UI that shows the decision**.
+
+| Track | Data signal | CAD / 3D idea | Front-end idea |
+| --- | --- | --- | --- |
+| **A** | `dust_storm_flag`, `habitat_thermal_load_kw_100p`, hourly temp | Blender / FreeCAD / Onshape: wall thickness, airlock, or restaurant pod that **seals / thickens** when storm=1; animate shutters from the daily summary | Dashboard: sol scrubber, temp curve, "seal now" state driven by the CSV |
+| **B** | terrain labels + `terrain_risk_score`, `energy_kwh`, `battery_soh` | CadQuery / Blender: train / rover path extruded over a simple Mars plane; color segments by risk | Map UI: draw route, overlay soil/bedrock/sand/rock, show battery drain over 730 sols |
+| **C** | `solar_availability`, `greenhouse_ventilation_m3_per_h`, `cabin_co2_ppm_proxy` | Greenhouse CAD with vents / fans that open wider as ventilation rises; dim grow-lights when solar crashes | Control panel: O2/water gauges for 100 people, red alert on storm days |
+
+Fast path tonight: pandas or a notebook computes one number (seal / risk / vent). Push that number into Blender (`bpy`), Three.js, Streamlit, Gradio, or a static HTML chart. One closed loop beats a perfect model with no UI.
 
 ---
 
@@ -70,6 +86,18 @@ Prompts, not ceilings. Remix them.
 - **Track A · Architecture:** Mars storm-bunker restaurants that seal and re-route when dust walls hit.
 - **Track B · Vehicles & Mobility:** Self-driving train transportation across Mars, scoring every stretch of trackbed for safety and energy.
 - **Track C · Life Support:** Indoor air ventilation systems for greenhouses that keep both crew and crops alive through solar blackouts.
+
+---
+
+## Know before you overclaim
+
+Full list: [`KNOWN_ISSUES.txt`](./KNOWN_ISSUES.txt). Short version:
+
+- **A:** simulated weather; storm barely mutes day-night swing; 24 h grid, not a true 24 h 40 m sol.
+- **B:** only 48 real images; synthetic masks are identical; trip timetable is invented for the 100-person / 730-sol brief.
+- **C:** not raw Mars500 telemetry; CO2 proxy stays mild; cite NASA rate priors + HREDA framing.
+
+Still useful: shared assumptions so every crew designs for **100 people**, **730 sols**, and **one dust season**.
 
 ---
 
@@ -87,4 +115,4 @@ Mentors on the floor cover PhysicsX, 3D modelling, and ML support.
 
 ---
 
-*Not affiliated as an official PhysicsX product. Community starter pack for GirlsWhoML × PhysicsX participants.*
+*Not affiliated as an official PhysicsX product. Community starter pack for GirlsWhoML × PhysicsX participants. Original pack content: MIT. Upstream datasets: see CREDITS.txt.*

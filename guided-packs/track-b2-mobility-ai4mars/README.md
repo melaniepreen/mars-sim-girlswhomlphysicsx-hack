@@ -5,10 +5,6 @@ autonomous fleets that have to choose safe routes and spend every watt
 carefully."* Built for the route-scoring / autonomous-planning use case
 ("plan an autonomous route scored by safety and energy cost").
 
-Fully synthetic and reproducible (seeded, `numpy`/`pandas` only — no external
-downloads needed), so it's ready to use the moment hacking starts. Swap in
-real HiRISE/MOLA rasters later via `rasterio`/`GDAL` if you have time; the
-schema below is designed to look like what you'd get from real terrain data.
 
 ## Files
 
@@ -32,8 +28,7 @@ One row per terrain cell.
 | `traversal_energy_wh_per_m` | **Target-ish**: Wh consumed per metre crossing this cell |
 
 Use this to train a **per-cell cost model** (predict `traversal_energy_wh_per_m`
-or `hazard_prob`/`safety_score` from slope/rock/dust/terrain_type), which is
-exactly the kind of cost surface an A*/Dijkstra route planner needs.
+or `hazard_prob`/`safety_score` from slope/rock/dust/terrain_type), which is the kind of cost surface an A*/Dijkstra route planner needs.
 
 ### `vehicles.csv` (4 rows — reference table)
 
